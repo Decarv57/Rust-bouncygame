@@ -31,6 +31,8 @@ struct Game{
     ball : Ball
 }
 
+
+///The implementation adds all the previous structs  to the impl Game.
 impl Game {
     fn new()->Game{
      
@@ -90,7 +92,8 @@ impl Ball{
     }
 }
 
-
+/// This implementation is the display of how the function will appear
+/// It will have a | wall as the x and _ floor as y
 impl Display for Game{
     fn fmt(&self, fmt:&mut Formatter)->Result<(), Error>{
         write!(fmt, "x");
@@ -100,7 +103,7 @@ impl Display for Game{
                 if self.ball.x == x as i32 && self.ball.y == y as i32{
                     write!(fmt, "O");
                 }
-                if x == 0 {write!(fmt, "|");} else if x!=0 && y!=31 {write!(fmt, " ");} else {write!(fmt,"-");}
+                if x == 0 {write!(fmt, "|");} else if x!=0 && y!=31 {write!(fmt, " ");} else {write!(fmt,"_");}
             }
             write!(fmt, "|\n");
         }
@@ -110,6 +113,7 @@ impl Display for Game{
     }
 }
 
+/// The main function calls all of the previous functions and implenation
 
 fn main() {
      let mut new_game  = Game::new();
