@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["HorizDir",""],["VertDir",""]],"fn":[["main","The main function calls all of the previous functions and implenation"]],"struct":[["Ball",""],["Frame",""],["Game",""]]};
